@@ -16,6 +16,6 @@ alumno=alumnos(nombre1,nombre2,nombre3,nombre4);
 console.log(`sumar(${num1}+${num2})= ${total}`); 
 console.log(`multiplicar(${num1}*${num2})=${total2}`);
 console.log(`${nombre1}+${nombre2}+${nombre3}+${nombre4}`);
-for(let i=0;i=>4;i++){
+for(let i=0;i<=4;i++){
     console.log(alumno[i])
 }
