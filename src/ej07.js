@@ -1,6 +1,6 @@
-import { getCountryByAbbreviation   } from 'currency-map-country';
+import { getCountryByAbbreviation, getCountry   } from 'currency-map-country';
 let monedaDelPais,codigoPais;
-codigoPais='AR';
+codigoPais='UK';
 monedaDelPais = obtenerMoneda(codigoPais);
 console.log(`La moneda del país ${codigoPais} es:${monedaDelPais}`);
 
@@ -9,12 +9,13 @@ monedaDelPais=obtenerMoneda(codigoPais);
 console.log(`Lamonedadelpaís${codigoPais}es:${monedaDelPais}`);
 
 function obtenerMoneda(codigoPais){
-    let retorno = null;
+    let ultimo= null;
+    let retorno = getCountryByAbbreviation(codigoPais);
     try{
-        retorno = getCountryByAbbreviation    (codigoPais);
+       ultimo = getCountry(retorno);
     } catch(err){
         console.log(err.message)
     }
-    console.log('retorno:', retorno);
-    return retorno;
+    console.log('retorno:', ultimo);
+    return ultimo;
 }
